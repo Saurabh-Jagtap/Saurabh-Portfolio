@@ -22,10 +22,26 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Saurabh Jagtap | Full-Stack Developer",
+  metadataBase: new URL("https://saurabhjagtap.tech"),
+  title: {
+    default: "Saurabh Jagtap | Full-Stack Developer",
+    template: "%s | Saurabh Jagtap",
+  },
   description:
-    "I'm Saurabh Jagtap, a full-stack developer building practical web applications and thoughtful software experiences.",
+    "Saurabh Jagtap is a full-stack developer building practical web applications with TypeScript, React, Next.js, Node.js, and modern backend technologies.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Saurabh Jagtap | Full-Stack Developer",
+    description:
+      "Explore Saurabh Jagtap's projects, technical skills, and experience building web applications.",
+    url: "https://saurabhjagtap.tech",
+    siteName: "Saurabh Jagtap",
+    type: "website",
+  },
 };
+
 
 export default function RootLayout({
   children,
