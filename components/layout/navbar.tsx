@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import { Sun } from "lucide-react";
+import Image from "next/image";
 
 const links = [
   { label: "Work", href: "#work" },
@@ -19,23 +20,28 @@ export default function Navbar() {
         className="mx-auto flex min-h-[76px] w-full max-w-[1320px] items-center justify-between gap-4 px-5 sm:px-8 lg:px-12"
       >
         <Link
-          href="#home"
-          aria-label="Saurabh Jagtap home"
-          className="flex shrink-0 items-center gap-3"
-        >
-          <span className="font-serif text-4xl leading-none tracking-[-0.1em]">
-            SJ
-          </span>
+  href="#home"
+  aria-label="Saurabh Jagtap home"
+  className="flex shrink-0 items-center gap-3"
+>
+  <Image
+    src="/images/icon.png"
+    alt="Saurabh Jagtap logo"
+    width={48}
+    height={48}
+    priority
+    className="h-12 w-12 rounded-md object-contain"
+  />
 
-          <span className="flex flex-col">
-            <span className="text-sm font-semibold tracking-tight">
-              Saurabh Jagtap
-            </span>
-            <span className="mt-0.5 text-[11px] text-muted">
-              The Thoughtful Builder
-            </span>
-          </span>
-        </Link>
+  <span className="flex flex-col">
+    <span className="text-sm font-semibold tracking-tight">
+      Saurabh Jagtap
+    </span>
+    <span className="mt-0.5 text-[11px] text-muted">
+      The Thoughtful Builder
+    </span>
+  </span>
+</Link>
 
         <div className="hidden items-center gap-5 lg:flex xl:gap-7">
           {links.map((link) => (
